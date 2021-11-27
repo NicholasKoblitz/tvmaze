@@ -19,6 +19,7 @@
  */
 
 const MISSING_URL = "https://tinyurl.com/tv-missing";
+$("#hr").hide();
 
 async function searchShows(query) {
   // TODO: Make an ajax request to the searchShows api.  Remove
@@ -85,6 +86,7 @@ $("#search-form").on("submit", async function handleSearch(evt) {
 
   $("#episodes-area").hide();
 
+
   let shows = await searchShows(query);
 
 
@@ -98,6 +100,7 @@ $("#search-form").on("submit", async function handleSearch(evt) {
       const episodes = await getEpisodes(id);
 
       $('#episodes-area').show();
+      $("#hr").show();
 
       populateEpisode(episodes);
 
