@@ -36,6 +36,8 @@ async function searchShows(query) {
     });
   }
 
+
+
   return shows;
 }
 
